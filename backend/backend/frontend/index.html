@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>足球比分预测</title>
+</head>
+<body>
+    <h1>⚽ 墨西哥 VS 厄瓜多尔</h1>
+    <div id="score-box"></div>
+
+    <script>
+        // 等下我教你替换这里链接
+        fetch("https://你的render地址.onrender.com/api/mexico")
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById("score-box").innerText = "推荐比分：" + data.score.join(" 、 ")
+        })
+    </script>
+</body>
+</html>
