@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>足球赛事预测</title>
+</head>
+<body>
+    <h2>墨西哥 VS 厄瓜多尔 预测比分</h2>
+    <div id="result"></div>
+
+    <script>
+        const apiUrl = "后端接口地址/api/mexico";
+        fetch(apiUrl)
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('result').innerText =
+            `对阵：${data.match}，推荐比分：${data.score}`
+        })
+    </script>
+</body>
+</html>
